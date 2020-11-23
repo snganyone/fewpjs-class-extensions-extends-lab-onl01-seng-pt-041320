@@ -32,5 +32,21 @@ class Triangle extends Polygon{
 }
 
 class Square extends Polygon{
+    get isValid(){
+        for(let i = 0; i < this.arr.length; i++){
+            if(this.arr[i] === this.arr[i + 1] && this.arr[i] === this.arr[i + 2] && this.arr[i] === this.arr[i + 3]){
+                return true;
+            } else{
+                return false;
+            }
+        }
+    }
 
+    get area(){
+        let area;
+        for(let i = 0; i < this.arr.length; i++){
+            area = this.arr[i] * this.arr[i];
+        }
+        return area;
+    }
 }
