@@ -17,3 +17,20 @@ class Polygon{
         return count;
     }
 }
+
+class Triangle extends Polygon{
+    get isValid(){
+        this.arr.sort();
+        for(let i = 0; i < this.arr.length - 2; i++){
+            if(this.arr[i] + this.arr[i + 1] > this.arr[i + 2]){
+                return true;
+            } else{
+                return false;
+            }
+        }
+    }
+}
+
+class Square extends Polygon{
+
+}
